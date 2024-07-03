@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Sholat Hari Ini</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4CAF50">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet"> <!-- Tambahkan link Google Fonts -->
+</head>
+<body>
+    <div id="splash-screen">
+        <img src="icon-192x192.png" alt="Logo" class="splash-logo">
+    </div>
+    <header>
+        <img src="icon-192x192.png" alt="Logo" class="logo">
+        <h1>Jadwal Sholat Hari Ini</h1>
+        <div id="current-time"></div> <!-- Elemen untuk menampilkan waktu saat ini -->
+    </header>
+    <div>
+        <label for="city-select">Pilih Kota:</label>
+        <select id="city-select">
+            <option value="Jakarta">Jakarta</option>
+            <option value="Bandung">Bandung</option>
+            <option value="Surabaya">Surabaya</option>
+            <option value="Medan">Medan</option>
+            <option value="Makassar">Makassar</option>
+            <option value="Semarang">Semarang</option>
+            <option value="Palembang">Palembang</option>
+            <option value="Bogor">Bogor</option>
+            <option value="Malang">Malang</option>
+            <option value="Yogyakarta">Yogyakarta</option>
+            <!-- Tambahkan opsi kota lainnya sesuai kebutuhan -->
+        </select>
+    </div>
+    <div id="jadwal-sholat">
+        <!-- Jadwal sholat akan ditampilkan di sini -->
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

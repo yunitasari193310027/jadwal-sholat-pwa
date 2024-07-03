@@ -1,0 +1,88 @@
+body {
+    font-family: 'Amiri', serif; /* Ganti font menjadi Amiri */
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    background-color: #D6D6D6; /* Ubah background menjadi abu-abu */
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#current-time {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#city-select {
+    margin: 20px 0;
+    padding: 10px;
+    font-size: 1em;
+}
+
+#jadwal-sholat {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.jadwal-item {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.jadwal-item p {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+.jadwal-item p:first-child {
+    font-weight: bold; /* Buat tulisan Subuh, Dzuhur, dll menjadi bold */
+}
+
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #D6D6D6; /* Ubah background menjadi abu-abu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.splash-logo {
+    width: 150px;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    #jadwal-sholat {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .jadwal-item {
+        margin: 10px 0;
+    }
+}
