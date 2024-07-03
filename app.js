@@ -9,6 +9,39 @@ if ('serviceWorker' in navigator) {
         });
 }
 
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    // Mencegah prompt default
+    e.preventDefault();
+    // Simpan event untuk digunakan nanti
+    deferredPrompt = e;
+    // Tampilkan UI untuk menginstal PWA
+    const installButton = document.createElement('button');
+    installButton.innerText = 'Install App';
+    installButton.style.position = 'fixed';
+    installButton.style.bottom = '10px';
+    installButton.style.right = '10px';
+    document.body.appendChild(installButton);
+
+    installButton.addEventListener('click', () => {
+        // Tampilkan prompt instalasi
+        deferredPrompt.prompt();
+        // Tunggu pengguna untuk memilih
+        deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === 'accepted') {
+                console.log('User accepted the install prompt');
+            } else {
+                console.log('User dismissed the install prompt');
+            }
+            // Hapus prompt yang disimpan
+            deferredPrompt = null;
+            // Hapus tombol install
+            document.body.removeChild(installButton);
+        });
+    });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const citySelect = document.getElementById('city-select');
     

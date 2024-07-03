@@ -4,6 +4,7 @@ body {
     padding: 20px;
     margin: 0;
     background-color: #D6D6D6; /* Ubah background menjadi abu-abu */
+    color: #000000; /* Ubah teks menjadi hitam */
 }
 
 header {
@@ -28,13 +29,16 @@ header {
     margin: 20px 0;
     padding: 10px;
     font-size: 1em;
+    background-color: #FFFFFF; /* Ubah background select menjadi putih */
+    color: #000000; /* Ubah teks select menjadi hitam */
+    border: 1px solid #000000; /* Ubah border select menjadi hitam */
 }
 
 #jadwal-sholat {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    background: #fff;
+    background: #FFFFFF; /* Ubah background jadwal menjadi putih */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
